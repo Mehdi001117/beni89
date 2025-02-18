@@ -8,47 +8,62 @@
         body {
             margin: 0;
             padding: 0;
-            background: linear-gradient(135deg, #ff9a9e, #fad0c4);
             font-family: 'Arial', sans-serif;
-            color: #333;
             display: flex;
             justify-content: center;
             align-items: center;
             flex-direction: column;
             height: 100vh;
+            background: linear-gradient(120deg, #ff9a9e, #fad0c4, #fbc2eb);
+            color: #fff;
             overflow: hidden;
+            animation: bgAnimation 10s infinite alternate;
+        }
+
+        @keyframes bgAnimation {
+            0% { background: linear-gradient(120deg, #ff9a9e, #fad0c4, #fbc2eb); }
+            50% { background: linear-gradient(120deg, #a18cd1, #fbc2eb, #fad0c4); }
+            100% { background: linear-gradient(120deg, #fad0c4, #ff9a9e, #fbc2eb); }
         }
 
         h1 {
-            font-size: 2.5rem;
-            text-align: center;
+            font-size: 2.8rem;
             margin-bottom: 20px;
-            color: #fff;
-            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+            animation: fadeIn 2s ease-in-out;
         }
 
         img {
-            width: 300px;
+            width: 280px;
             height: auto;
             border-radius: 15px;
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-            margin-bottom: 20px;
+            margin: 20px 0;
+            animation: bounce 2s infinite;
         }
 
         p {
-            font-size: 1.5rem;
+            font-size: 1.7rem;
             font-weight: bold;
             text-align: center;
-            color: #fff;
-            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+            animation: fadeIn 2s ease-in-out 1s;
+        }
+
+        audio {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            opacity: 0.5;
         }
 
         footer {
             position: absolute;
-            bottom: 10px;
+            bottom: 0;
             font-size: 1rem;
-            color: rgba(255, 255, 255, 0.8);
+            color: rgba(255, 255, 255, 0.7);
             text-align: center;
+            padding: 10px;
         }
 
         footer a {
@@ -56,11 +71,21 @@
             text-decoration: none;
             font-weight: bold;
         }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
     </style>
 </head>
 <body>
     <h1>من بنی ساکی هستم</h1>
-    <img src="YOUR_IMAGE_URL" alt="<a href="https://ibb.co/23KSMkjC"><img src="https://i.ibb.co/tpCz2Jbv/59-BE68-A2-B5-D8-48-EA-91-A6-EDAA051-C2-C66.png" alt="59-BE68-A2-B5-D8-48-EA-91-A6-EDAA051-C2-C66" border="0"></a>">
+    <img src="https://i.ibb.co/qYLHLfc3/E97-FE103-45-EF-42-D8-9-C7-F-9-DFE428-E2-CBE.png" alt="Beny Image">
     <p>ساک میزنم قیمت: ۱۵۰</p>
     <audio autoplay loop>
         <source src="YOUR_AUDIO_URL" type="audio/mpeg">
